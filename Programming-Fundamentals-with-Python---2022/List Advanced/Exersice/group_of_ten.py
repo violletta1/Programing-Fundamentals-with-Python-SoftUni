@@ -5,15 +5,7 @@
 # The numbers 13, 19, 14, and 15 fall into the group of 20's.
 # For more clarification, see the examples below.
 
-
 #
-# sequence_of_numbers = [int(sequence) for sequence in input().split(", ")]
-# boundary = 0
-# for current_number in range(len(sequence_of_numbers)):
-#     boundary += 10
-#     current_number, boundary
-
-
 numbers = [int(number) for number in input().split(", ")]  #разделяме числата и си превръщаме от стринг в инт
 group_of_numbers = 10                   # започваме сортиането на числа с критерий от 0 до 10
 counter = 0                             #позиция на текушото число
@@ -25,3 +17,28 @@ while counter < len(numbers):          # проверяваме докато п�
             counter += 1                                                    # премини към следвашата позиия на дадено число от листта с числа
     print(f"Group of {group_of_numbers}'s: {collected_numbers}")           #след проверката на всички числа за даденото сортиране принтирай сортирането и листа с добавени числа
     group_of_numbers += 10             #увеличаваме критерия за сортиране на числа с 10
+
+
+
+
+#          2.Example
+
+
+# initial_numbers = input().split(", ")
+# integer_lst = [int(x) for x in initial_numbers]
+#
+# boundary = max(integer_lst)
+# boundary_str = str(boundary)
+# if int(boundary_str[0]) * 10 < boundary:
+#     boundary = (int(boundary_str[0]) * 10) + 10
+# boundary_copy = boundary
+#
+# final_lst = []
+# while boundary > 0:
+#     numbers_lst = [x for x in integer_lst if boundary - 10 <= x <= boundary]
+#     boundary -= 10
+#     final_lst.append(numbers_lst)
+#
+# final_lst = final_lst[::-1]
+# for current_group in range(0, boundary_copy // 10):
+#     print(f"Group of {int(current_group + 1) * 10}'s: {final_lst[current_group]}")
