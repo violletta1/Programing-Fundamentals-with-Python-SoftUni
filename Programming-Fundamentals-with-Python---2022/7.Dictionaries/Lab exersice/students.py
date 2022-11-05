@@ -16,8 +16,10 @@ while len(command) > 1:# докато командата е с повече от
     command = input().split(":")#
 
 searched_course = command[0].replace("_", " ")# при излизане от while цикъл правим променлива със стойност - първият елемент от зададената команда превърната в списък
+
 #първи начин
 # print("\n".join(students[searched_course]))#изважда стойноста на дадения ключ(searched_course) \n разделя на отделен ред елементите от списъка
+
 # #втори начин
 for student in students[searched_course]: #минава през всеки елемент от спиъка в даден еемент в речник с [ключ]
     print(student)
