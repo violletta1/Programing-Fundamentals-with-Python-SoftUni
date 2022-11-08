@@ -10,16 +10,34 @@ phonebook = {}
 command = input().split("-")
 
 
-while len(command) > 1:
-    name, number = command[0], command[1]
-    phonebook[name] = number
-    command = input().split("-")
+while len(command) > 1:# докато командата има повече от 1 ел-т
+    name, number = command[0], command[1]#разделяме командата на части
+    phonebook[name] = number#създаваме елемент в речника
+    command = input().split("-")#
 
-num_of_people_for_searched = command[0]
+num_of_people_for_searched = command[0]#командата е 1 ел взимаме само 1та част
 
-for searched_person in range(int(num_of_people_for_searched)):
-    current_person = input()
-    if current_person in phonebook.keys():
-        print(f"{current_person} -> {phonebook[current_person]}")
-    else:
-        print(f"Contact {current_person} does not exist.")
+for searched_person in range(int(num_of_people_for_searched)):# за всеки човек в range от командата
+    current_person = input()#взимаме от конзолатаа текущ човек
+    if current_person in phonebook.keys():# ако текъщият човек съществува в речника
+        print(f"{current_person} -> {phonebook[current_person]}")#
+     else:#ако не съществува
+        print(f"Contact {current_person} does not exist.")#
+
+
+
+# phonebook = {}
+# while True:
+#     entry = input()
+#     if "-" not in entry:
+#         break
+#     name, phone = entry.split("-")
+#     phonebook[name] = phone
+# for check in range(int(entry)):
+#     searched_name = input()
+#     if searched_name in phonebook.keys():
+#         print(f"{searched_name} -> {phonebook[searched_name]}")
+#     else:
+#         print(f"Contact {searched_name} does not exist.")
+
+
