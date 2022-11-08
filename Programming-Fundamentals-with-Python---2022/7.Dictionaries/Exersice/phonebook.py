@@ -20,10 +20,9 @@ num_of_people_for_searched = command[0]#командата е 1 ел взима�
 for searched_person in range(int(num_of_people_for_searched)):# за всеки човек в range от командата
     current_person = input()#взимаме от конзолатаа текущ човек
     if current_person in phonebook.keys():# ако текъщият човек съществува в речника
-        print(f"{current_person} -> {phonebook[current_person]}")#
-     else:#ако не съществува
+        print(f"{current_person} -> {phonebook[current_person]}")
+    else:#ако не съществува
         print(f"Contact {current_person} does not exist.")#
-
 
 
 # phonebook = {}
@@ -39,5 +38,3 @@ for searched_person in range(int(num_of_people_for_searched)):# за всеки 
 #         print(f"{searched_name} -> {phonebook[searched_name]}")
 #     else:
 #         print(f"Contact {searched_name} does not exist.")
-
-
